@@ -1,0 +1,11 @@
+.todoHeading {
+    font-weight: 200;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    color: cornflowerblue;
+    background-color: darkorange;
+    margin-left: 14cm;
+    margin-right: 14cm;
+    /* padding-top: 2cm; */
+
+}
