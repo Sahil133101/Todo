@@ -1,0 +1,40 @@
+.Calculator{
+  border: 1px solid black;
+  width: 200px;
+  border-radius: 2px;
+}
+.Display {
+  margin: 10px;
+  width: 175px;
+  justify-content: left;
+  
+  
+}
+.ButtonContainer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.Button {
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: #3498db; /* Add your desired background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Button button {
+  border: none;
+  background: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px; /* Adjust font size as needed */
+  color: #ffffff; /* Adjust text color */
+}
