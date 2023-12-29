@@ -28,6 +28,10 @@ const newTodoItem = [...todoItems,{name : itemName,
 dueDate : itemDueDate,}]
 setTodoItems(newTodoItem);
 }
+  
+const handleDelete = (xyz) => {
+  const newItem = todoItems.filter(item => item.name !== todoItemName);
+};
   return <>
  <center className='TodoContainer'>
         <Appnane />
@@ -35,7 +39,7 @@ setTodoItems(newTodoItem);
   <br />
   
  
-<Todoitems items={todoItems}></Todoitems>
+<Todoitems items={todoItems}> onDeleteclick= {handleDelete}</Todoitems>
 
 </center>
     
