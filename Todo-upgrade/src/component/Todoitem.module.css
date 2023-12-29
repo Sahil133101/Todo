@@ -1,3 +1,8 @@
 .Todoitem{
     background-color: darksalmon;
+    width: 200px;
+}
+.Todo{
+    width :60px;
+    background-color: darksalmon;
 }
