@@ -1,13 +1,18 @@
+// Todoitems.jsx
 import Todoitem from "./Todoitem";
-const  Todoitems = ({items, onDeleteClick}) => {
-    return (
-        <>
-        {items.map((items) => (
-            <Todoitem tododate={items.dueDate} todoproduct = {items.name}
-            onDeleteClick={onDeleteClick}> 
-            </Todoitem>
-        ))}
-        </>
-    );
-}
+
+const Todoitems = ({ items, onDeleteClick }) => {
+  return (
+    <>
+      {items.map((item) => (
+        <Todoitem
+          todoDate={item.dueDate}
+          todoName={item.name}
+          onDeleteClick={onDeleteClick}
+        />
+      ))}
+    </>
+  );
+};
+
 export default Todoitems;

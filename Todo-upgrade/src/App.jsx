@@ -2,7 +2,7 @@ import { useState } from "react";
 import Appnane from "./component/Appnane";
 import Firstrow from './component/Firstrow';
 
-import Todoitems from "./component/TodoItems";
+import Todoitems from "./component/Todoitems";
 
 
 export default function App(){
