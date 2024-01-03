@@ -2,24 +2,20 @@ import { useState } from "react";
 import Appnane from "./component/Appnane";
 import Firstrow from './component/Firstrow';
 
+import WelcomeMessage from "./component/WelcomeMessage";
+
 import Todoitems from "./component/Todoitems";
 
 
 export default function App(){
-  const initialTodoitems = [
-    {
-     name : "buy milk",
-     dueDate : "13/10/2023",
-    }
-    
-  ];
+  
 
  
 
 
 
   
-  const [todoItems ,setTodoItems]= useState(initialTodoitems);
+  const [todoItems ,setTodoItems]= useState([]);
    
   const handleNewItem = (itemName , itemDueDate) => {
  //console.log(`new item Added: ${itemName} Date: ${itemDueDate}`);
@@ -35,6 +31,7 @@ const handleDelete = (xyz) => {
   return <>
  <center className='TodoContainer'>
         <Appnane />
+        {todoItems.length === 0 && <WelcomeMessage />}
        <Firstrow onNewItem = {handleNewItem} />
   <br />
   
