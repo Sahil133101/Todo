@@ -26,8 +26,12 @@ setTodoItems(newTodoItem);
 }
   
 const handleDelete = (xyz) => {
-  const newItem = todoItems.filter(item => item.name !== todoItemName);
+  
+const newItems = todoItems.filter(item => item.name !== xyz);
+  console.log(`Item delete :${todoItemName}`)
+setTodoItems(newItems);
 };
+
   return <>
  <center className='TodoContainer'>
         <Appnane />

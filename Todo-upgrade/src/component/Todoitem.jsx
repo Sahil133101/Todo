@@ -1,5 +1,7 @@
 import styles from './Todoitem.module.css';
-export default function Todoitem ({todoName , todoDate, onDeleteClick }){
+
+import App from '../App';
+export default function Todoitem ({todoName , todoDate, onDeleteClick}){
    
     return (
         <>
@@ -13,9 +15,18 @@ export default function Todoitem ({todoName , todoDate, onDeleteClick }){
     <h3 className={styles['Todoitem']}>{todoDate}</h3>
   </div>
   <div class ='col-2'>
-  <button type="button" class="btn btn-danger" className={styles['Todo']}
-  onClick={()=> onDeleteClick(todoName)}
-  >Delete</button>
+  
+<button
+  type="button"
+  class="btn btn-danger"
+  className={styles['Todo']}
+  onClick={() => {
+    console.log('onDeleteClick:', onDeleteClick);
+    onDeleteClick(todoDate);
+  }}
+>
+  Delete
+</button>
 
   </div>
 </div>
