@@ -15,7 +15,9 @@ export default function Firstrow({onNewItem}) {
     setDueDate(event.target.value);
   }
 
-  const handleAddButtonClicked = () =>{
+  const handleAddButtonClicked = (event) =>{
+    event.preventDefault();
+    console.log(event);
     onNewItem(todoName, dueDate);
     setTodoName(" ");
     setDueDate(" ");
@@ -23,7 +25,7 @@ export default function Firstrow({onNewItem}) {
   }
   return (
     <>
-      <div className="row">
+      <form div className="row" onSubmit={handleAddButtonClicked}>
         <div className="col-6">
           <input type="text" placeholder="Enter Todo Here"  value={todoName} onChange={handleNameChange}/>
         </div>
@@ -32,14 +34,15 @@ export default function Firstrow({onNewItem}) {
         </div>
         <div className="col-2">
           <button
-            type="button"
+            type="submit"
             className="btn btn-success"
-            onClick={handleAddButtonClicked}
+           
           >
             Add
           </button>
         </div>
-      </div>
+      
+      </form>
     </>
   );
 }

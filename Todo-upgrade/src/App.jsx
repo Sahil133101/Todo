@@ -5,6 +5,9 @@ import Firstrow from './component/Firstrow';
 import WelcomeMessage from "./component/WelcomeMessage";
 
 import Todoitems from "./component/Todoitems";
+import 'bootstrap/dist/css/bootstrap.css';
+// Put any other imports below so that CSS from your
+// components takes precedence over default styles.
 
 
 export default function App(){
